@@ -51,7 +51,7 @@ require('packer').startup(
         -- The ultimate snippet solution for Vim
     use 'https://github.com.cnpmjs.org/SirVer/ultisnips'
     -- Snippets are separated from the engine. Add this if you want them
-    --use 'https://github.com.cnpmjs.org/honza/vim-snippets'
+    use 'https://github.com.cnpmjs.org/honza/vim-snippets'
         -- pulling in C++ function prototypes into implementation files
     use 'https://github.com.cnpmjs.org/derekwyatt/vim-protodef'
         -- A tree explorer plugin for vim
@@ -65,7 +65,7 @@ require('packer').startup(
         -- Instant Markdown previews from VIm!
     use 'https://github.com.cnpmjs.org/suan/vim-instant-markdown'
         -- keep and restore fcitx state when leaving/re-entering insert mode
-    use 'https://github.com.cnpmjs.org/lilydjwg/fcitx.vim'
+    --use 'https://github.com.cnpmjs.org/lilydjwg/fcitx.vim'
         -- Run interactive commands inside a Vim buffer
     use 'https://github.com.cnpmjs.org/lrvick/Conque-Shell'
         -- text using the same key combination.
@@ -179,8 +179,8 @@ require('packer').startup(
     end
 
     -- Snippet engine and snippet template
-    use {'https://hub.fastgit.org/SirVer/ultisnips', event = {'InsertEnter'}}
-    use {'https://hub.fastgit.org/honza/vim-snippets', event = {'InsertEnter'}}
+    --use {'https://hub.fastgit.org/SirVer/ultisnips', event = {'InsertEnter'}}
+    --use {'https://hub.fastgit.org/honza/vim-snippets', event = {'InsertEnter'}}
 
     -- Automatic insertion and deletion of a pair of characters
     use 'https://hub.fastgit.org/jiangmiao/auto-pairs'

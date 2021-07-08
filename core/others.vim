@@ -1160,3 +1160,8 @@ nmap <Leader>ql :cl<CR>
 nmap <Leader>qw :cw<CR>
 nmap <Leader>qop :copen<CR>
 nmap <Leader>qo :cclose<CR>
+
+" 透明设置
+highlight Normal guibg=none
+highlight NonText guibg=none
+

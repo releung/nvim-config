@@ -11,14 +11,9 @@ _ mv nvim /usr/local/bin
 
 # nvim config
 ```shell
-wget https://github.com.cnpmjs.org/jdhao/nvim-config/
-git clone https://hub.fastgit.org/jdhao/nvim-config/
+git clone https://hub.fastgit.org/releung/nvim-config/
 cd nvim-config
-cd docs
-./Nvim_setup.sh
-
-cp ../init.vim ~/.config/nvim/init.vim
-cp ../lua/plugins.lua ~/.config/nvim/lua/plugins.lua
+./doc/Nvim_setup.sh
 ```
 
 # clangd Install
@@ -27,3 +22,16 @@ sudo apt-get install clangd-9
 sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100
 ```
 
+# vim-language-server Install
+```shell
+_ npm install -g vim-language-server
+```
+
+# python default
+```shell
+#先删除默认的Python软链接：
+sudo rm /usr/bin/python
+
+#然后创建一个新的软链接指向需要的Python版本：
+sudo ln -s /usr/bin/python3.8 /usr/bin/python
+```
