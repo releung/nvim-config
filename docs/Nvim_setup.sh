@@ -7,7 +7,7 @@ PYTHON_INSTALLED=true
 
 # If Python has been installed, then we need to know whether Python is provided
 # by the system, or you have already installed Python under your HOME.
-SYSTEM_PYTHON=false
+SYSTEM_PYTHON=true
 
 # If SYSTEM_PYTHON is false, we need to decide whether to install
 # Anaconda (INSTALL_ANACONDA=true) or Miniconda (INSTALL_ANACONDA=false)
@@ -86,13 +86,12 @@ else
     done
 fi
 
-
 #######################################################################
 #                            Ripgrep part                             #
 #######################################################################
 RIPGREP_DIR=$HOME/tools/ripgrep
 RIPGREP_SRC_NAME=$HOME/packages/ripgrep.tar.gz
-RIPGREP_LINK="https://github.com/BurntSushi/ripgrep/releases/download/12.0.0/ripgrep-12.0.0-x86_64-unknown-linux-musl.tar.gz"
+RIPGREP_LINK="https://hub.fastgit.org//BurntSushi/ripgrep/releases/download/12.0.0/ripgrep-12.0.0-x86_64-unknown-linux-musl.tar.gz"
 if [[ -z "$(command -v rg)" ]] && [[ ! -f "$RIPGREP_DIR/rg" ]]; then
     echo "Install ripgrep"
     if [[ ! -f $RIPGREP_SRC_NAME ]]; then
@@ -119,7 +118,7 @@ fi
 #######################################################################
 CTAGS_SRC_DIR=$HOME/packages/ctags
 CTAGS_DIR=$HOME/tools/ctags
-CTAGS_LINK="https://github.com/universal-ctags/ctags.git"
+CTAGS_LINK="https://hub.fastgit.org//universal-ctags/ctags.git"
 if [[ ! -f "$CTAGS_DIR/bin/ctags" ]]; then
     echo "Install ctags"
 
@@ -148,7 +147,7 @@ NVIM_DIR=$HOME/tools/nvim
 NVIM_SRC_NAME=$HOME/packages/nvim-linux64.tar.gz
 NVIM_CONFIG_DIR=$HOME/.config/nvim
 NVIM_SITE_DIR=$HOME/.local/share/nvim/site
-NVIM_LINK="https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz"
+NVIM_LINK="https://hub.fastgit.org//neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz"
 if [[ ! -f "$NVIM_DIR/bin/nvim" ]]; then
     echo "Installing Neovim"
     echo "Creating nvim directory under tools directory"
@@ -176,10 +175,10 @@ if [[ -d "$NVIM_CONFIG_DIR" ]]; then
     mv "$NVIM_CONFIG_DIR" "$NVIM_CONFIG_DIR.backup"
 fi
 
-git clone --depth=1 https://github.com/jdhao/nvim-config.git "$NVIM_CONFIG_DIR"
+git clone --depth=1 https://hub.fastgit.org//jdhao/nvim-config.git "$NVIM_CONFIG_DIR"
 
 echo "Installing packer.nvim"
-git clone --depth=1 https://github.com/wbthomason/packer.nvim \
+git clone --depth=1 https://hub.fastgit.org//wbthomason/packer.nvim \
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 echo "Installing plugins"
