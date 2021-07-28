@@ -1165,3 +1165,5 @@ nmap <Leader>qo :cclose<CR>
 highlight Normal guibg=none
 highlight NonText guibg=none
 
+" 解决COMMIT_EDITMSG  CONVERSION ERROR 问题
+set fileencoding=utf-8
